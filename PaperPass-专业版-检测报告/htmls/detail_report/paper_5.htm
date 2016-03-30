@@ -1,0 +1,570 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>PaperPass 最权威论文抄袭检测系统</title>
+<style type="text/css">
+<!--
+user_icon {
+color: #FFFFFF;
+}
+html
+{
+overflow-x:hidden;
+overflow-y:auto;
+}
+body,td,th {
+font-family: "微软雅黑";
+font-size: 12px;
+}
+h1,h2,h3,h4,h5,h6 {
+font-family: "宋体";
+}
+p{
+margin-bottom:10px;
+}
+demo_padding {
+line-height: 30px;
+}
+.zhengwen {
+padding-right: 15px;
+padding-left: 5px;
+padding-bottom:100px;
+font-size: 13px;
+line-height: 20px;
+color: #666666;
+}
+.zhengwencenter {
+padding-right: 15px;
+padding-left: 0px;
+margin-bottom:10px;
+font-size: 13px;
+line-height: 20px;
+color: #666666;
+text-align:center
+}
+.neikuang {
+background-color: #EBEBEB;
+border: 1px solid #999999;
+padding-right: 10px;
+padding-left: 10px;
+margin-top:10px;
+margin-left:25px;
+width:300px;
+}
+.shubu{
+height: 20px;
+width: 20px;
+margin-left:25px;
+background-color: #FFFFFF;
+border: 1px solid #999999;
+text-align: center;
+vertical-align: middle;
+display: block;
+color: #666666;
+}
+a.red:link {color:#FF0000}
+a.red:visited {color:#FF0000}
+a.red:hover {color:#000000}
+a.red:active {color:#000000}
+
+a.orange:link {color:#FF6600}
+a.orange:visited {color:#FF6600}
+a.orange:hover {color:#000000}
+a.orange:active {color:#000000}
+
+a.dark:link {color:#666666}
+a.dark:visited {color:#666666}
+a.dark:hover {color:#000000}
+a.dark:active {color:#000000}
+
+a.pagelink:hover {color:#000000}
+a.pagelink:active {color:#000000}
+
+.green{color:#008000}
+.gray{color:#666666}
+.red{color:#FF0000}
+.orange{color:#FF6600}
+a{TEXT-DECORATION:none}
+
+-->
+</style>
+</head>
+<body>
+
+
+<div class="zhengwen">
+<div>
+<span style="margin-left:25px"></span>
+[
+<a class="pagelink" href="paper_1.htm">首页</a>
+<a class="pagelink" href="paper_4.htm">上一页</a>
+<a class="pagelink" href="paper_6.htm">下一页</a>
+<a class="pagelink" href="paper_6.htm">尾页</a>
+页码：5/6页
+]
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">212</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>最后到后台清理一下缓存，在前台首页左边区域的底部就能看到用户的最新评论了。</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">213</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>至于商品详情页goods.php显示该商品的评论数量，系统默认是不显示的，但是有好几种办法可以实现。</span><span class='green'>网络上的办法要么在includesb/lib_insert.php文件末尾插入一个函数再到模板调用，要么在includesb/lib_goods.php文件添加函数，都比较复杂。</span><span class='green'>因此，有一个简便方法：</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">214</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>首先，打开 themes\ ecmoban_ handuyise\ library目录下的 comments_ list. lbi文件，查找[ font class=” f1”]{$ pager. record_ count}[/ font]，</span><span class='green'>在[ font class= f1]里添加 id= com_ sum；</span><span class='green'>然后，打开themes\ecmoban_handuyise目录下的goods.dwt模板文件，在合适位置添加一个id为“comments”的HTML行内标签，如[font id=” comments ”][/font]；</span><span class='green'>最后，因为comments_list.lbi也有在goods.dwt文件里调用，所以直接在goods.dwt底部添加JavaScript如下代码即可，效果如图3.5.2：</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">215</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>document.getElementById(comments).innerHTML=document.getElementById(com_sum).innerHTML;</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">216</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>3.8 接入支付宝快捷登录和担保交易</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">217</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>在3.3.6已经介绍到，支付方式安装完成还需要进行相关的配置才能实现支付功能，支付宝不过如此。</span><span class='green'>但是在配置支付宝之前，还需要到支付宝商家服务首页https:</span><span class='green'>//b.alipay.com/newIndex.htm申请成为商家，每个商家都会有一个交易安全校验码Key和一个合作者身份PID。</span><span class='green'>接着选择合适的产品与支付宝签约，签约成功后下载对应产品的集成文档到网站根目录进行技术集成方可实现。</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">218</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><a href='../sentence_detail/355.htm' target='right' class='orange' >第一步，使用签约了的支付宝账号登录支付宝商家服务主页，在“我的商家服务”下点击“查询PID、Key”获取合作者身份和安全检验码。</a>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">219</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>第二步，进入系统后台，点击系统设置-支付方式，安装好支付宝后点击进入编辑，填写支付宝账号和查询到的合作者身份、安全检验码，</span><span class='green'>再根据签约的产品类型选择接口类型。</span><span class='green'>至此步骤完成，系统已经能够实现支付宝的担保交易了，即用户下单付款后直到确认收货为止，商家的账户才能到账。</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">220</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>接入支付宝快捷登录的好处是，在网店系统中会自动创建一个以支付宝真实姓名为用户名的网店会员账号，</span><span class='green'>可以直接下单购买，免去了注册会员的流程。</span><span class='green'>令人惊喜的是，该功能也支持本地测试！</span><span class='green'>所以：</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">221</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>第三步，前往https:</span><span class='green'>//b.alipay.com/order/techService.htm下载快捷登录的集成文档，在网站根目录创建文件夹“alipay”，将文档解压至此文件夹，其代码文件结构如下图：</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">222</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>第四步，需要配置的文件有alipay.config.php、return_url.php和user_url.php等文件。</span><span class='green'>首先打开alipay.config.php文件，在头部设置好$aliapy_config[’partner’]（合作身份者ID）和$aliapy_config[’key’]（安全检验码），并在接下去添加一下代码：</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">223</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>if($_GET[”type”]==”user”){</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">224</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>$aliapy_config[’return_url’] = ’http:</span><span class='green'>//（域名）/alipay/user_url.php’;</span><span class='green'>//本地为127.0.0.1或localhost</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">225</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>}else{</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">226</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>$aliapy_config[’return_url’] = ’http:</span><span class='green'>//（域名）/alipay/return_url.php’;</span><span class='green'>//本地为127.0.0.1或localhost</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">227</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>然后打开return_url.php文件，在提示位置添加业务逻辑程序代码，代码见附录（3）。</span><span class='green'>再复制一个retun_url.php文件，重命名为user_url.php，将两处header(”Location:</span><span class='green'>/flow.php”)修改为header(”Location:</span><span class='green'>/index.php”)即可。</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">228</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>第五步，打开themes\ecmoban_handuyise目录下的flow.dwt和user_passport.dwt，在登录按钮下面添加一个链接接口入口文件的图片链接[a href=”alipay/auth_authorize.php?</span><span class='green'>type=user”][img src=”images/alipay_Logo.png” /][/a]。</span><a href='../sentence_detail/381.htm' target='right' class='orange' >至此，就可以使用支付宝账号登录网店系统了。</a>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">229</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>4 系统测试</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">230</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>在完成了系统后台的基本设置和前台主要功能的二次开发之后，为保证系统功能的良好运行，需要对各项功能以预期功能为标准进行测试，以满足前期规定的需求。</span><span class='green'>在系统上传前进行系统功能的测试，也有利于下一步系统上传后的维护，减少后期工作量，从而节约系统的维护成本。</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">231</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>4.1 基本功能测试</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">232</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><a href='../sentence_detail/386.htm' target='right' class='orange' >系统的基本功能测试主要指前台运行效果的测试，主要包括图文链接的测试和搜索功能的测试。</a>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">233</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>系统前台每个页面都有很多链接，包括文字和图片链接。</span><span class='green'>系统开发过程中，由于种种原因，存在无效的链接在所难免。</span><a href='../sentence_detail/389.htm' target='right' class='orange' >无效的链接又称死链接，即点击某个链接后系统没有响应。</a><span class='green'>死链接对一个网站来说是致命的，一是用户访问网站，点击了某个链接却无法到达，这无疑会降低用户的信任，网站的整体形象也会大打折扣。</span><a href='../sentence_detail/391.htm' target='right' class='orange' >二是现在搜索引擎蜘蛛就是通过网站的链接爬行搜索的，如果存在死链接，将孤立页面，阻塞搜索引擎对页面的收录，从而降低页面在搜索引擎中的权重，影响SEO。</a><span class='green'>ECShop网店系统的每一个页面并不像简单的网页那样仅有数个链接，而是遍是链接。</span><a href='../sentence_detail/393.htm' target='right' class='orange' >这时如果手动来测试链接的话，无疑会投入大量的时间，也容易在测试过程中疏漏。</a><span class='green'>鉴于此，可以利用链接测试工具来代替人工，比如站长工具和站长帮手的在线链接测试，其原理就是，</span><span class='green'>访问查询者提供的域名，遍历网页中的所有链接，并分析这些链接的去向，碰到死链接便记录下来；</span><span class='green'>也可以到网上下载Xenu、Dead Links等免费测试软件，这些软件测试完成后会生成报告，有利于管理和修复链接。</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">234</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><a href='../sentence_detail/397.htm' target='right' class='orange' >ECShop系统前台首页搜索功能默认搜索的关键字是商品名或者商品货号，这样的搜索功能很有限。</a><span class='green'>为提高用户体验和体现人性化，且系统中商品类型为书，需要把书的一些属性作为搜索关键字，方便用户搜索。</span><a href='../sentence_detail/399.htm' target='right' class='orange' >例如，书的国际标准书号ISBN是唯一的，可以通过书的ISBN搜索指定的书；</a><span class='green'>也可以将书的作者、出版社、父分类名等作为搜索关键字进行搜索。</span><a href='../sentence_detail/401.htm' target='right' class='orange' >因此，搜索功能的测试，主要是针对不同关键字进行搜索的测试。</a><a href='../sentence_detail/402.htm' target='right' class='orange' >经过测试，输入不容关键字都能搜索到相应的商品。</a>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">235</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>4.2 会员注册测试</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">236</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>网店并不是任何人都可以下单购买的，这需要先在网店里注册成为会员才能实现。</span><span class='green'>在系统后台-系统设置-会员注册项设置里可以设置会员注册项是否必填，取消一些不重要的注册项如 MSN、办公电话及家庭电话无疑可以节省用户的注册时间，</span><span class='green'>简化用户的注册流程。</span><span class='green'>但是出于用户账户安全和密码遗忘能够找回考虑，设置密码提示问题和注册邮件就显得非常必要。</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">237</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>根据右侧表单验证的提示信息填写注册项，唯有提示“可以注册”方可点击下方“会员注册”按钮。</span><span class='green'>注册完成之后，用户填写的邮箱会收到网店系统的一封验证邮件，点击邮件里的验证链接会提示邮箱验证成功。</span><a href='../sentence_detail/410.htm' target='right' class='orange' >至此，会员注册测试完成，会员注册功能运行良好。</a>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">238</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>4.3 购物流程测试</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">239</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>一个完整的购物流程测试应该包括浏览网店、选择商品、确认下单、信息填写、确认支付。</span><span class='green'>4.1和4.2已经完成了搜索功能和会员注册的测试，所以在浏览网店之前，最好先登录，</span><span class='green'>因为不同等级会员对应的商品显示价格是不一样的，当然也可以在下单之前注册登录。</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">240</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>在浏览网店时，由于页面显示的商品数量有限，用户不得不以搜索商品的方式来选择商品；</span><a href='../sentence_detail/416.htm' target='right' class='orange' >确认选择商品后进入购物车，购物车里除了可以选择要购买商品的数量，也可以清空和更新购物车；</a><span class='green'>确认提交订单时，系统会判断此时是否会员登录，唯有登录的会员才能进入下一步；</span><span class='green'>如果会员还未填写收货地址，就需先填写收货地址，然后选择配送方式和支付方式，余额不足时，可以选择其它支付方式并跳转至其页面完成支付。</span><span class='green'>经过测试，整个购物流程能顺利完成。</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">241</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>5 系统上线</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">242</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>5.1 注册域名和购买空间</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">243</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>5.1.1 注册域名</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">244</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><a href='../sentence_detail/423.htm' target='right' class='orange' >域名（ Domain Name）简单地说就是计算机间在互联网上相互取得联系的网络地址，它是唯一的，</a><span class='green'>遵循先注册先得的原则，比如 www. baidu. com百度注册走了，就不能再注册得到。</span><span class='green'>也因如此，互联网发展至今，域名就变成了一类相对有限的网络资源，越来越引起人的重视。</span>
+</p>
+</div>
+
+
+<div>
+<span style="margin-left:25px"></span>
+[
+<a class="pagelink" href="paper_1.htm">首页</a>
+<a class="pagelink" href="paper_4.htm">上一页</a>
+<a class="pagelink" href="paper_6.htm">下一页</a>
+<a class="pagelink" href="paper_6.htm">尾页</a>
+页码：5/6页
+]
+</div>
+
+<br>
+<div style="margin-left:8px">
+
+<div style="text-align:center;background-color:#CA122C;margin-top:30px;overflow:hidden;">
+<a href="http://www.paperpass.com/publish/index?from=ppreport_banner" target="_blank" style="display:block;"><img height="180" src="http://file.paperpass.com/images/fabiao.jpg"></a>
+</div>
+
+</div>
+</div>
+
+
+<div class="zhengwencenter">
+<p>
+检测报告由<a href="http://www.paperpass.com/" target="_blank">PaperPass</a>文献相似度检测系统生成
+</p>
+<p>
+Copyright © 2007-2016 PaperPass
+</p>
+</div>
+<div style="margin-bottom:400px"></div>
+</body>
+</html>
